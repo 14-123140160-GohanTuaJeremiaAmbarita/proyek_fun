@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Telecommunication cable placeholder">
+  <rect width="800" height="600" fill="#eef7f7"/>
+  <path d="M90 320c120-120 230 120 350 0s210-88 270 0" fill="none" stroke="#0d3177" stroke-width="42" stroke-linecap="round"/>
+  <path d="M90 320c120-120 230 120 350 0s210-88 270 0" fill="none" stroke="#00a8a8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="192" cy="250" r="18" fill="#1457d9"/>
+  <circle cx="390" cy="356" r="18" fill="#1457d9"/>
+  <circle cx="610" cy="262" r="18" fill="#1457d9"/>
+  <text x="64" y="530" font-family="Arial" font-size="42" font-weight="700" fill="#172033">Telecommunication</text>
+</svg>
