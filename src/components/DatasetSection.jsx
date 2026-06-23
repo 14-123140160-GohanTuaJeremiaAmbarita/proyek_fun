@@ -1,3 +1,4 @@
+import React from "react";
 import { internalDatasetTemplate } from "../data/vokselData.js";
 
 export function DatasetSection() {

@@ -1,3 +1,4 @@
+import React from "react";
 import { profilePhotos } from "../data/vokselData.js";
 
 export function GallerySection() {

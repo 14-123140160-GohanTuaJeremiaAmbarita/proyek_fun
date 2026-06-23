@@ -1,24 +1,26 @@
+import React from "react";
 import { addresses, company } from "../data/vokselData.js";
 
-const rows = [
-  ["Nama", company.name],
-  ["Kode Saham", company.ticker],
-  ["Sektor", company.sector],
-  ["Industri", company.industry],
-  ["Berdiri", company.founded],
-  ["IPO", company.ipo],
-  ["Bisnis", company.business],
-  ["Kontak", `${company.phone} / ${company.email}`],
-];
-
-const metrics = [
-  ["Kode Saham", company.ticker],
-  ["Berdiri", "1971"],
-  ["IPO", "1990"],
-  ["Produk Inti", "5 Lini"],
-];
-
 export function DataSection() {
+  // Kita deklarasikan rows langsung di dalam fungsi agar aman membaca data objek
+  const rows = [
+    ["Nama", company?.name || "PT Voksel Electric Tbk"],
+    ["Kode Saham", company?.ticker || "VOKS"],
+    ["Sektor", company?.sector || "Industri"],
+    ["Industri", company?.industry || "Kabel"],
+    ["Berdiri", company?.founded || "1971"],
+    ["IPO", company?.ipo || "1990"],
+    ["Bisnis", company?.business || "Manufaktur Kabel"],
+    ["Kontak", `${company?.phone || ""} / ${company?.email || ""}`],
+  ];
+
+  const metrics = [
+    ["Kode Saham", company?.ticker || "VOKS"],
+    ["Berdiri", "1971"],
+    ["IPO", "1990"],
+    ["Produk Inti", "5 Lini"],
+  ];
+
   return (
     <section id="data" className="section data-section">
       <div className="section-heading">
@@ -29,18 +31,20 @@ export function DataSection() {
         <div className="data-table-wrap">
           <table className="data-table">
             <tbody>
-              {rows.map(([label, value]) => (
+              {rows.map(([label, val]) => (
                 <tr key={label}>
                   <th>{label}</th>
-                  <td>{value}</td>
+                  <td>{val}</td> {/* <--- SEKARANG SUDAH DIPERBAIKI MENGGUNAKAN KURUNG KURAWAL VARIABLE */}
                 </tr>
               ))}
-              {addresses.map((address) => (
+              {addresses && addresses.map((address) => (
                 <tr key={address.label}>
                   <th>{address.label}</th>
                   <td>
                     {address.value}
-                    <small>{address.status}</small>
+                    <small style={{ marginLeft: "8px", color: "gray" }}>
+                      ({address.status})
+                    </small>
                   </td>
                 </tr>
               ))}

@@ -1,3 +1,4 @@
+import React from "react"; // <--- Ini ditambahkan di Baris 1 untuk menyelesaikan masalah
 import { products } from "../data/vokselData.js";
 
 export function ProductsSection() {

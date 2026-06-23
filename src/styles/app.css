@@ -56,6 +56,29 @@ input {
   backdrop-filter: blur(14px);
 }
 
+/* Pastikan animasi tidak memicu horizontal scrollbar tak sengaja */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Sempurnakan tampilan chatbot form button */
+.chat-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 46px;
+  height: 46px;
+}
+
+/* Penyelarasan ikon di tombol aksi hero */
+.primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .brand {
   display: flex;
   align-items: center;

@@ -1,3 +1,4 @@
+import React from "react";
 import { financialReview, marketData } from "../data/vokselData.js";
 
 const marketCards = [

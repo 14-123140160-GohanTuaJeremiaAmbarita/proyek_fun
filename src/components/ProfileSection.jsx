@@ -1,3 +1,4 @@
+import React from "react";
 import { addresses, company } from "../data/vokselData.js";
 
 const timeline = [

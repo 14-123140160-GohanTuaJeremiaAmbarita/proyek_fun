@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react"; // <--- Sudah diimpor aman
 import { answerQuestion, mainQuestions } from "../data/chatbotRules.js";
 
 const welcome =
