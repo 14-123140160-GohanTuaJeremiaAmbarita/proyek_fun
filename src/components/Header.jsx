@@ -12,9 +12,22 @@ export default function Header() {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      if (targetId === 'bantuan-footer') {
+        element.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      } else {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      window.history.pushState(null, null, `#${targetId}`);
+    }
+  };
+
   return (
     <header className="topbar">
-      <div className="brand">
+      <div className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
         <div className="brand-mark">V</div>
         <div>
           <strong>PT Voksel Electric Tbk</strong>
@@ -23,13 +36,13 @@ export default function Header() {
       </div>
       
       <div className="nav-links">
-        <a href="#profil">Profil</a>
-        <a href="#produk">Produk</a>
-        {/* PERBAIKAN: Mengubah teks dari Manifes menjadi Cetak Data */}
-        <a href="#cetak">Cetak Data</a>
-        <a href="#keuangan">Keuangan</a>
-        {/* PERBAIKAN: Tombol bantuan sekarang mengarah ke id #bantuan */}
-        <a href="#bantuan">Bantuan</a>
+        <a href="#profil" onClick={(e) => handleScroll(e, 'profil')}>Profil</a>
+        <a href="#produk" onClick={(e) => handleScroll(e, 'produk')}>Produk</a>
+        <a href="#cetak" onClick={(e) => handleScroll(e, 'cetak')}>Cetak Data</a>
+        <a href="#keuangan" onClick={(e) => handleScroll(e, 'keuangan')}>Keuangan</a>
+        
+        {/* Mengarah langsung ke elemen footer baru */}
+        <a href="#bantuan-footer" onClick={(e) => handleScroll(e, 'bantuan-footer')}>Bantuan</a>
 
         <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
           {theme === 'light' ? (

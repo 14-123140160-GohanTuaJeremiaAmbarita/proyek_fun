@@ -45,6 +45,13 @@
   --blue: #3b82f6;
   --blue-dark: #60a5fa;
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+  --footer-bg-start: #091220; /* Menjadi hitam pekat menyatu dengan malam */
+  --footer-bg-end: #050a12;
+  --footer-text: #e5e7eb;
+  --footer-btn-bg: #1e293b;
+  --footer-btn-text: #f3f4f6;
+
 }
 
 /* ==========================================================================
@@ -69,6 +76,9 @@ body,
 .message,
 .topbar,
 .market-card,
+.voksel-footer-dunia,
+.scroll-to-top-btn,
+.profile-section,
 .finance-summary,
 .dataset-status-card {
   /* Memaksa transisi perubahan warna selama 0.4 detik agar tidak kaku */
@@ -836,4 +846,211 @@ input {
   .printable-area, .printable-area * { visibility: visible; }
   .printable-area { position: absolute; left: 0; top: 0; width: 100%; background: white !important; color: black !important; padding: 0 !important; }
   .no-print { display: none !important; }
+}
+
+/* ==========================================================================
+   SISTEM FOOTER PREMIUM SLIDE-UP & BANTUAN LOOKALIKES
+   ========================================================================== */
+.voksel-footer-dunia {
+  background: linear-gradient(180deg, var(--footer-bg-start, #063c6f) 0%, var(--footer-bg-end, #032142) 100%) !important;
+  color: var(--footer-text, #ffffff) !important;
+  padding: 60px clamp(18px, 5vw, 64px) 30px clamp(18px, 5vw, 64px) !important;
+  border-top: 4px solid var(--teal) !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Ini yang memaksa konten di dalamnya sejajar menyamping */
+.voksel-footer-dunia .footer-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap !important; /* Agar aman dan responsif jika layar mengecil */
+  gap: 32px !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+}
+
+/* Membagi proporsi lebar kolom */
+.voksel-footer-dunia .footer-column {
+  flex: 1 !important;
+  min-width: 200px !important; /* Mencegah kolom terlalu berhimpitan */
+}
+
+/* Kolom profil dibikin sedikit lebih lebar */
+.voksel-footer-dunia .brand-info {
+  flex: 2 !important;
+  min-width: 280px !important;
+}
+
+/* Hilangkan titik bulat (bullet) bawaan tag ul/li */
+.voksel-footer-dunia .footer-column ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.voksel-footer-dunia .footer-column ul li {
+  margin-bottom: 12px !important;
+  list-style-type: none !important;
+}
+
+.voksel-footer-dunia .footer-column h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+/* Hak Cipta di bagian bawah */
+.voksel-footer-dunia .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-top: 48px !important;
+  padding-top: 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+/* Tombol Lingkaran Pop-Up Naik Ke Atas */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--footer-btn-bg) !important;
+  color: var(--footer-btn-text) !important;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: var(--blue) !important;
+  color: #ffffff !important;
+}
+
+.logo-text-ve {
+  font-size: 20px;
+  font-weight: 900;
+  background: #ffffff;
+  color: #063c6f !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.brand-info address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+.section-subtitle-footer {
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--teal) !important;
+}
+
+.contact-details {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.contact-details span {
+  color: var(--teal) !important;
+  font-weight: 600;
+}
+
+/* Icons Media Sosial Bulat Sesuai Gambar */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  background: var(--blue);
+  transform: scale(1.1);
+}
+
+/* Bagian Bawah Footer & Tombol Pop-up */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 48px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff !important;
+  color: #063c6f !important;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: var(--teal) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .voksel-footer-dunia .footer-container {
+    flex-direction: column !important;
+  }
+}
+/* Responsivitas untuk Layar Kecil */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .brand-info {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .brand-info {
+    grid-column: span 1;
+  }
 }
