@@ -11,9 +11,13 @@ export function Chatbot() {
 
   const suggestedQuestions = useMemo(() => mainQuestions, []);
 
+  const chatMessagesRef = useRef(null);
+  
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  if (chatMessagesRef.current) {
+    chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
+  }
+}, [messages]);
 
   const typeEffect = (fullText, callback) => {
     let currentText = "";
