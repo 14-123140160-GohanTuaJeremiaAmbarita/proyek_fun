@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Cable products photo placeholder">
-  <rect width="900" height="560" fill="#f8fbff"/>
-  <path d="M120 300h660" stroke="#0d3177" stroke-width="70" stroke-linecap="round"/>
-  <path d="M120 220h660" stroke="#00a8a8" stroke-width="46" stroke-linecap="round"/>
-  <path d="M120 380h660" stroke="#1457d9" stroke-width="46" stroke-linecap="round"/>
-  <text x="70" y="510" font-family="Arial" font-size="42" font-weight="700" fill="#172033">Foto Produk Kabel</text>
-</svg>

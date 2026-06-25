@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Power cable placeholder">
-  <rect width="800" height="600" fill="#e8f2f8"/>
-  <circle cx="250" cy="300" r="150" fill="#0d3177"/>
-  <circle cx="250" cy="300" r="92" fill="#172033"/>
-  <circle cx="250" cy="300" r="34" fill="#d69200"/>
-  <path d="M360 210h280a80 80 0 0 1 0 160H360z" fill="#1457d9"/>
-  <path d="M390 260h250a30 30 0 0 1 0 60H390z" fill="#68e7de"/>
-  <text x="64" y="530" font-family="Arial" font-size="44" font-weight="700" fill="#172033">Power Cable</text>
-</svg>

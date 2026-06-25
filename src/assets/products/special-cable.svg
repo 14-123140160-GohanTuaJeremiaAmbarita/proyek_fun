@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Special cable placeholder">
-  <rect width="800" height="600" fill="#f2f6fb"/>
-  <rect x="110" y="210" width="580" height="180" rx="90" fill="#0d3177"/>
-  <circle cx="230" cy="300" r="42" fill="#68e7de"/>
-  <circle cx="340" cy="300" r="42" fill="#ffffff"/>
-  <circle cx="450" cy="300" r="42" fill="#d69200"/>
-  <circle cx="560" cy="300" r="42" fill="#38a169"/>
-  <text x="64" y="530" font-family="Arial" font-size="44" font-weight="700" fill="#172033">Special Cable</text>
-</svg>
