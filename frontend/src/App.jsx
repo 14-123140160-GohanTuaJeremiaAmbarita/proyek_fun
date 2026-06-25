@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
-import { ProfileSection } from './components/ProfileSection.jsx';
+import ProfileSection from './components/ProfileSection.jsx';
 import { ProductsSection } from './components/ProductsSection.jsx';
 import { GallerySection } from './components/GallerySection.jsx';
 import { DataSection } from './components/DataSection.jsx';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { sendChatMessage } from '../services/api.js';
-import { useToast } from '../context/ToastContext.jsx';
+import { useToast } from './ToastContext.jsx';
 
 const WELCOME = 'Halo, saya Voksel Bot! Sekarang saya terhubung ke database perusahaan secara langsung. Silakan tanya tentang profil, produk, keuangan, investor, karyawan, penjualan, atau produksi.';
 
