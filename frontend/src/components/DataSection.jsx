@@ -14,6 +14,7 @@ const TABS = [
 ];
 
 function SalesTab() {
+  const [activeTab, setActiveTab] = useState('sales');
   const { data, loading, error, refetch } = useApi(fetchSalesSummary);
   if (loading) return <LoadingSpinner message="Memuat data penjualan..." />;
   if (error)   return <ErrorCard message={error} onRetry={refetch} />;
@@ -158,4 +159,8 @@ export function DatasetSection() {
       </div>
     </section>
   );
+}
+
+export function DataSection() {
+  return <h1>TEST DATA SECTION</h1>;
 }

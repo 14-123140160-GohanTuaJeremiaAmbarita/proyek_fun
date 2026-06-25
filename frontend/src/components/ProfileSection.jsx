@@ -3,7 +3,7 @@ import { fetchProducts, fetchCategories } from '../services/api.js';
 import { useApi } from '../hooks/useApi.js';
 import { LoadingSpinner, ErrorCard, EmptyState } from './UIKit.jsx';
 
-export function ProductsSection() {
+export default function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState('');
   const [search, setSearch] = useState('');
 
