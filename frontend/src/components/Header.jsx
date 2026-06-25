@@ -48,7 +48,7 @@ export default function Header() {
         <div className="brand-mark">V</div>
         <div>
           <strong>PT Voksel Electric Tbk</strong>
-          <small>Sistem Informasi Manifes v2.0</small>
+          <small>IT Voksel</small>
         </div>
       </div>
 
